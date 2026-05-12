@@ -9,8 +9,8 @@ The application allows users to browse news by category, search articles, view l
 ### Clone the repository
 
 ```bash
-git clone <repository-url>
-cd <project-folder>
+git clone https://github.com/nsitum/my-news
+cd my-news
 ```
 
 ### Install dependencies
