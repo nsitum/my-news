@@ -1,0 +1,44 @@
+$color-brand: #bb1e1e;
+$color-brand-hover: #a71a1a;
+$color-brand-soft-bg: rgba(187, 30, 30, 0.1);
+$color-brand-border-faint: rgba(187, 30, 30, 0.15);
+
+$color-surface: #ffffff;
+$color-text: #000000;
+$color-text-heading: #1d1d1b;
+$color-text-muted: #5c5c5c;
+$color-text-subtle: #a5a5a4;
+$color-text-placeholder: rgba(0, 0, 0, 0.4);
+$color-text-inverse-subtle: #f8f5f2;
+
+$color-page-bg: #f4f5f8;
+$color-link: #1e71bb;
+
+$color-border: #979797;
+$color-border-faint: rgba($color-border, 0.1);
+$color-divider: #f0f0f0;
+
+$color-scrollbar-thumb: rgba(0, 0, 0, 0.24);
+
+$shadow-card: 0px 1px 2px -1px #c8cad1;
+$shadow-card-hover: 0px 8px 24px rgba(0, 0, 0, 0.08);
+$shadow-menu-item-active: 0px 6px 36px rgba(0, 0, 0, 0.16);
+
+$radius-card: 8px;
+$radius-control: 4px;
+
+$transition-fast: 0.2s ease;
+
+$z-layout-sticky: 100;
+$z-mobile-menu: 200;
+
+$space-2: 2px;
+$space-4: 4px;
+$space-8: 8px;
+$space-16: 16px;
+$space-24: 24px;
+$space-32: 32px;
+$space-40: 40px;
+
+$breakpoint-tablet: 48em;
+$breakpoint-desktop: 64em;

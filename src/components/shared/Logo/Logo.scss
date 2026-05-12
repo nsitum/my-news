@@ -1,0 +1,18 @@
+@use "styles/variables" as *;
+
+.logo {
+  font-weight: 900;
+  line-height: 1;
+
+  &--sm {
+    font-size: 24px;
+  }
+
+  &--md {
+    font-size: 32px;
+  }
+
+  &__red {
+    color: $color-brand;
+  }
+}

@@ -1,0 +1,30 @@
+@use "styles/variables" as *;
+
+.news {
+  &__tabs {
+    @media (min-width: $breakpoint-desktop) {
+      display: none;
+    }
+  }
+
+  &__label {
+    display: none;
+
+    margin-bottom: $space-16;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+
+    color: $color-text-heading;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: block;
+    }
+  }
+
+  &__content {
+    margin-top: $space-16;
+  }
+}

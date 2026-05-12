@@ -1,0 +1,83 @@
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: contents;
+    }
+  }
+
+  &__logo {
+    &--desktop {
+      display: none;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__search {
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: flex;
+      align-items: center;
+      flex: 1;
+
+      margin-top: 0;
+      max-width: 725px;
+      gap: 6px;
+    }
+  }
+
+  &__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 24px;
+    height: 18px;
+
+    @include button-reset;
+
+    span {
+      display: block;
+
+      height: 4px;
+
+      background-color: $color-text;
+      border-radius: 2px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    background-color: $color-page-bg;
+
+    padding-block: 35px 28px;
+    border-bottom: 1px solid $color-border-faint;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 43px;
+  }
+}

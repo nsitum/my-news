@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/InterVariable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+html:has(.mobile-menu--open) {
+  overflow: hidden;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: $color-page-bg;
+}

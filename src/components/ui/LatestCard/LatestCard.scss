@@ -1,0 +1,43 @@
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+.latest-card {
+  padding-bottom: 12px;
+  border-bottom: 1px solid $color-page-bg;
+
+  text-decoration: none;
+
+  transition: opacity $transition-fast;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__time {
+    display: inline-block;
+
+    margin-bottom: 3px;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: -0.02px;
+
+    color: $color-link;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.02px;
+
+    color: $color-text;
+
+    @include line-clamp(2);
+  }
+}

@@ -1,0 +1,103 @@
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+.homepage-banner {
+  display: none;
+
+  &__content {
+    min-height: 60px;
+    max-width: 1128px;
+    margin-inline: auto;
+    padding: 0 $space-16;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__texts {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+  }
+
+  &__title {
+    color: $color-surface;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.14px;
+  }
+
+  &__description {
+    color: $color-surface;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.12px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $space-24;
+  }
+
+  &__button {
+    @include button-reset;
+
+    transition: opacity $transition-fast;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &--ghost {
+      color: $color-surface;
+
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0;
+    }
+
+    &--primary {
+      width: 69px;
+      height: 40px;
+
+      border: none;
+      border-radius: $radius-card;
+
+      background-color: $color-surface;
+
+      color: $color-text-heading;
+
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
+
+    width: 100vw;
+    min-height: 60px;
+
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    flex-shrink: 0;
+    background-color: $color-brand;
+
+    background-image: url("/banner-pattern.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    overflow: hidden;
+  }
+}

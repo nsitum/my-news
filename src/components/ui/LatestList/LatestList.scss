@@ -1,0 +1,165 @@
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+.latest-list {
+  background-color: $color-surface;
+  border-radius: $radius-card;
+
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 18px 15px 12px;
+
+    flex-shrink: 0;
+  }
+
+  &__chevron {
+    flex-shrink: 0;
+    transition: transform $transition-fast;
+
+    width: 12px;
+    height: 12px;
+  }
+
+  &__indicator {
+    width: 20px;
+    height: 20px;
+
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.02px;
+
+    color: $color-text;
+  }
+
+  &__body {
+    padding-right: 3px;
+
+    flex: 1;
+    min-height: 0;
+  }
+
+  &__items {
+    height: 100%;
+    max-height: 420px;
+
+    overflow-y: auto;
+
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $color-scrollbar-thumb;
+
+      border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      max-height: 460px;
+    }
+  }
+
+  &__loader {
+    width: 100%;
+
+    @include flex-center-column;
+
+    padding-block: 8px;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+
+    padding: 15px 14px 16px;
+
+    border-top: 1px solid $color-divider;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.02px;
+
+    color: $color-link;
+
+    transition:
+      color $transition-fast,
+      opacity $transition-fast;
+
+    &:hover {
+      opacity: 0.8;
+
+      .latest-list__chevron {
+        transform: translateX(2px);
+      }
+    }
+  }
+
+  &__arrow {
+    color: $color-text;
+
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  &__feedback {
+    @include flex-center;
+
+    min-height: 100%;
+
+    padding-block: $space-24;
+  }
+
+  &__end,
+  &__error {
+    text-align: center;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    color: $color-text-subtle;
+  }
+
+  &__error {
+    color: $color-brand;
+  }
+
+  .feedback-state {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+}

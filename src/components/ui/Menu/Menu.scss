@@ -1,0 +1,15 @@
+@use "styles/variables" as *;
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 95px);
+  justify-content: center;
+  column-gap: $space-16;
+  row-gap: 8px;
+
+  @media (min-width: $breakpoint-desktop) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 0;
+  }
+}

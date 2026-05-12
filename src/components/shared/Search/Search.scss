@@ -1,0 +1,90 @@
+@use "styles/variables" as *;
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  height: 48px;
+  padding: 0 $space-16;
+
+  border-radius: 10px;
+  background-color: $color-surface;
+
+  box-shadow: $shadow-card;
+
+  &:focus-within {
+    outline: 1px solid $color-brand;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    color: $color-text-subtle;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    background: transparent;
+
+    flex: 1;
+
+    font: inherit;
+    color: inherit;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.2px;
+
+    &::placeholder {
+      color: $color-text-placeholder;
+    }
+  }
+
+  &__action {
+    display: none;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: block;
+    }
+  }
+
+  &__button {
+    width: 95px;
+    height: 40px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: $color-brand;
+
+    color: $color-surface;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: $color-brand-hover;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-right: 5px;
+    gap: 15px;
+
+    &:focus-within {
+      outline-width: 2px;
+    }
+  }
+}

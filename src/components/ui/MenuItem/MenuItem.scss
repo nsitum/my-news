@@ -1,0 +1,67 @@
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+.menu-item {
+  @include button-reset;
+
+  width: 95px;
+  height: 95px;
+
+  @include flex-center-column;
+
+  gap: 6px;
+
+  border-radius: $radius-control;
+
+  cursor: pointer;
+
+  color: $color-text-subtle;
+
+  transition:
+    background-color $transition-fast,
+    box-shadow $transition-fast,
+    color $transition-fast;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+
+    flex-shrink: 0;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.7px;
+    letter-spacing: 0.14px;
+
+    text-align: center;
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 14px;
+      letter-spacing: 0.1px;
+    }
+  }
+
+  &--active {
+    background-color: $color-surface;
+
+    color: $color-brand;
+
+    box-shadow: $shadow-menu-item-active;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 63px;
+    height: 63px;
+
+    gap: 4px;
+  }
+}

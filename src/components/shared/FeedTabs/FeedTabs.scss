@@ -1,0 +1,27 @@
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+.feed-tabs {
+  @include flex-center;
+
+  &__item {
+    @include button-reset;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.02px;
+
+    color: $color-text;
+
+    padding: 10px $space-16;
+    border-radius: 20px;
+
+    transition: all $transition-fast;
+
+    &--active {
+      background-color: $color-brand-soft-bg;
+      color: $color-brand;
+    }
+  }
+}
