@@ -9,7 +9,7 @@ type GetLatestNewsParams = {
   offset?: number;
 };
 
-export async function getLatestNews({
+async function getLatestNews({
   limit = 20,
   offset = 0,
 }: GetLatestNewsParams = {}) {
@@ -23,3 +23,5 @@ export async function getLatestNews({
     `https://api.nytimes.com/svc/news/v3/content/all/all.json?${params.toString()}`,
   );
 }
+
+export { getLatestNews };

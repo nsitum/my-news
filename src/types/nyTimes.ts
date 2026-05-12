@@ -1,3 +1,8 @@
+type LatestNewsResponse = {
+  results: NYTimesArticle[];
+  num_results: number;
+};
+
 type NYTimesArticle = {
   title: string;
   abstract: string;
@@ -15,9 +20,4 @@ type NYTimesArticle = {
   }[];
 };
 
-type LatestNewsResponse = {
-  results: NYTimesArticle[];
-  num_results: number;
-};
-
-export type { LatestNewsResponse,NYTimesArticle };
+export { type LatestNewsResponse, type NYTimesArticle };

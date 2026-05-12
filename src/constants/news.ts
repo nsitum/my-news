@@ -1,4 +1,4 @@
-export const categories = [
+const categories = [
   "general",
   "business",
   "health",
@@ -7,20 +7,26 @@ export const categories = [
   "technology",
 ] as const;
 
-export type Category = (typeof categories)[number];
+type Category = (typeof categories)[number];
 
-export function isValidCategory(value: string | undefined): value is Category {
+function isValidCategory(value: string | undefined): value is Category {
   return (
-    value !== undefined &&
-    (categories as readonly string[]).includes(value)
+    value !== undefined && (categories as readonly string[]).includes(value)
   );
 }
 
-export const categoryLabels: Record<Category, string> = {
+const categoryLabels: Record<Category, string> = {
   general: "General",
   business: "Business",
   health: "Health",
   science: "Science",
   sports: "Sports",
   technology: "Technology",
+};
+
+export {
+  categories,
+  type Category,
+  categoryLabels,
+  isValidCategory,
 };

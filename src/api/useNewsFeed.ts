@@ -11,7 +11,7 @@ type UseNewsFeedProps = {
   enabled?: boolean;
 };
 
-export function useNewsFeed({
+function useNewsFeed({
   category,
   page,
   pageSize,
@@ -39,3 +39,5 @@ export function useNewsFeed({
     }),
   });
 }
+
+export { useNewsFeed };

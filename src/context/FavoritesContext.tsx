@@ -30,7 +30,7 @@ const getUpdatedFavorites = (favorites: Article[], article: Article) => {
   return [article, ...favorites];
 };
 
-export function FavoritesProvider({ children }: FavoritesProviderProps) {
+function FavoritesProvider({ children }: FavoritesProviderProps) {
   const [favorites, setFavorites] = useState<Article[]>(() => {
     const stored = localStorage.getItem(FAVORITES_KEY);
 
@@ -61,7 +61,7 @@ export function FavoritesProvider({ children }: FavoritesProviderProps) {
   );
 }
 
-export function useFavorites() {
+function useFavorites() {
   const context = useContext(FavoritesContext);
 
   if (!context) {
@@ -70,3 +70,5 @@ export function useFavorites() {
 
   return context;
 }
+
+export { FavoritesProvider, useFavorites };

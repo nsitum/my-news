@@ -11,7 +11,7 @@ import FavoritesPage from "@/pages/Favorites";
 import HomePage from "@/pages/Home";
 import NotFoundPage from "@/pages/NotFound";
 
-export function AppRouter() {
+function AppRouter() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
@@ -23,3 +23,5 @@ export function AppRouter() {
     </Routes>
   );
 }
+
+export default AppRouter;

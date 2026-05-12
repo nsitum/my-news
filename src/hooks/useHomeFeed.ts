@@ -18,7 +18,7 @@ type HomeFeedProps = {
   searchQuery: string;
 };
 
-export function useHomeFeed({ searchQuery }: HomeFeedProps) {
+function useHomeFeed({ searchQuery }: HomeFeedProps) {
   const trimmedSearch = searchQuery?.trim() ?? "";
 
   const searchNewsQuery = useSearchNews({
@@ -73,3 +73,5 @@ export function useHomeFeed({ searchQuery }: HomeFeedProps) {
     error,
   };
 }
+
+export { useHomeFeed };

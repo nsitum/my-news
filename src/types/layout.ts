@@ -5,4 +5,4 @@ type OutletContextType = {
   isDesktop: boolean;
 };
 
-export type { NewsFeedTab, OutletContextType };
+export { type NewsFeedTab, type OutletContextType };

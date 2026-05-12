@@ -21,4 +21,4 @@ type NewsFeedResponse = {
   articles: Article[];
 };
 
-export type { Article, NewsFeedResponse };
+export { type Article, type NewsFeedResponse };

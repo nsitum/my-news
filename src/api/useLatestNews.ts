@@ -4,7 +4,7 @@ import { getLatestNews } from "@/services/nyTimes";
 
 const LATEST_NEWS_LIMIT = 20;
 
-export function useLatestNews() {
+function useLatestNews() {
   return useInfiniteQuery({
     queryKey: ["latest-news"],
 
@@ -25,3 +25,5 @@ export function useLatestNews() {
     },
   });
 }
+
+export { useLatestNews };
