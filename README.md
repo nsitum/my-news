@@ -1,4 +1,4 @@
-# News App
+# My News
 
 A responsive news application built with React, TypeScript and Vite.
 
